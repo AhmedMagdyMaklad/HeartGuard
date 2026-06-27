@@ -1,0 +1,307 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>HeartGuard - AI-Powered Heart Disease Prediction</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#083fb4",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex h-16 items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl" style="">heart_check</span>
+</div>
+<span class="text-xl font-bold tracking-tight text-slate-900 dark:text-white" style="">HeartGuard</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-white transition-colors" href="#features" style="">Features</a>
+<a class="text-sm font-medium text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-white transition-colors" href="#how-it-works" style="">How It Works</a>
+<a class="text-sm font-medium text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-white transition-colors" href="#trust" style="">Trust</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="hidden sm:flex items-center justify-center rounded-lg px-4 py-2 text-sm font-semibold text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800" style="">Log in</button>
+<button class="bg-primary text-white rounded-lg px-5 py-2 text-sm font-bold shadow-sm hover:bg-primary/90 transition-all" style="">Get Started</button>
+</div>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative overflow-hidden py-16 lg:py-24">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid lg:grid-cols-2 gap-12 items-center">
+<div class="flex flex-col gap-8">
+<div class="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-sm font-semibold text-primary" style="">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+                            Now powered by Qwen2.5 72B Instruct for Medical Analysis
+                        </div>
+<h1 class="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight tracking-tight text-slate-900 dark:text-white" style="">
+                            Predict and Prevent <span class="text-primary" style="">Heart Disease</span> with AI-Powered Insights
+                        </h1>
+<p class="text-lg text-slate-600 dark:text-slate-400 max-w-xl" style="">
+                            Medical-grade analysis for a healthier heart. Use our advanced AI to monitor risks, track clinical data, and receive personalized health recommendations based on global cardiovascular standards.
+                        </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary text-white rounded-xl px-8 py-4 text-lg font-bold shadow-lg shadow-primary/25 hover:translate-y-[-2px] transition-all" style="">
+                                Get Started Free
+                            </button>
+</div>
+<div class="flex items-center gap-4 text-sm text-slate-500">
+<div class="flex -space-x-2">
+<img alt="Doctor 1" class="h-8 w-8 rounded-full border-2 border-white dark:border-slate-900" data-alt="Portrait of a medical doctor smiling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBy93PqTBVMZ0WkzCPrKX1X5r7umfqUgxrga2CnJMlz3ppwLjEmxyBMTKUVwg8MlHFLXngBsj_RAxAnI9veXkZiPl0z47qlXSQxAti4D-jJtO7JzIHI6Mw0gdklvG2q967hj8kUv_np-Esno8vTj7q_g1HhV-g148lx26TOnSoZvJE5XLFnNYuRPsVWs00IsOx72fIjUmIeqGjgt7rOr-Uajr5gIZfMR1xsWu62MlNnj1FgvzOajRokDb22a56wbcFaNwhKobYmakY" style="">
+<img alt="Doctor 2" class="h-8 w-8 rounded-full border-2 border-white dark:border-slate-900" data-alt="Portrait of a cardiologist professional" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBB_hxBd5LYR7rNe_NBs-8q4i9FDYEaepCjtmY8shlbdjX5_ZtUSWmCqAomt-wQwydo5tkhamcQg_0buPyfPcJynTBT2B5Yj3scOQYqIBm2KjG7R3V5T6nNysLudozUd79RqR-nqh6zg54KdvpHlCEL42pdhOBMysHYbJBE89cX8QlNTs7UEtGmtxIPaXhOOh_j5jFclQYjF0rE3CjaVUfPN6hRHWeM3QGBpjQ1MA61rSMMeq02JwogSMx0TUtX2tp0G7XnpizgSMc" style="">
+<img alt="Doctor 3" class="h-8 w-8 rounded-full border-2 border-white dark:border-slate-900" data-alt="Portrait of a healthcare specialist" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwsfFvv1yKrdagcp8Hm_IoGxomATCyA8XoYqYIXKb6rpCcTuIppNu5L7zeKfgZJvQeFEfqjEBRGFYZrt33lfiOJTKlvaLEwngosiC0XqvfdXDkeir0WtgEmP2cW_Cmkk7iH2Oh_BYWoPMJhubFTtymYxXvHEV8iHOoWPjof9bXRvDSd9JK0TdwQ-oquSXElEpOUBjy8nnCyXuTs4qqM2bSvtKRQ-eE-dFn46OWFw39t1FHQn-2JeGqZ8BzOhT7UwIp9Zr6H-FVkzo" style="">
+</div>
+<span class="" style="">Trusted by 500+ Cardiologists worldwide</span>
+</div>
+</div>
+<div class="relative">
+<div class="absolute inset-0 bg-primary/20 blur-3xl rounded-full"></div>
+<div class="relative bg-white dark:bg-slate-900 rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-800 overflow-hidden">
+<img alt="AI Interface" class="w-full h-auto object-cover" data-alt="Medical professional reviewing heart health data on a modern tablet interface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4YIAUSnJhdkc-dLz7LmTxvnKACB69-GHvFLcSITDxwbbjF5xaRAB9cfqHibWO_kcfzPZc7kgvXmAIAjZUWf_ZpNOMw13SXEyVG5qcl4zOR1mEg51HEzTW_a-n1jaVdqVBso5w2VtI3m06DZqNgF72FfmXYKW0y_5niaxvtsPFZJoaDyGrAxJ51z0Kcr_EVRxm5EBhm-pnbv_jfUE-yhT7Ha93YEo9FH6bPfHx5ru6gMw5whZmPspFCxRpFoULDDswg7yKXECfs2U" style="">
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Features Section -->
+<section class="py-20 bg-slate-50 dark:bg-slate-900/50" id="features">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center max-w-3xl mx-auto mb-16">
+<h2 class="text-primary font-bold tracking-wider uppercase text-sm mb-3" style="">Core Capabilities</h2>
+<h3 class="text-3xl sm:text-4xl font-black text-slate-900 dark:text-white mb-4" style="">Advanced Features for Your Heart Health</h3>
+<p class="text-slate-600 dark:text-slate-400" style="">Our suite of medical-grade tools provides comprehensive insights into your cardiovascular well-being using the latest in biometric analysis.</p>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Feature 1 -->
+<div class="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700 hover:border-primary/50 transition-all">
+<div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-6">
+<span class="material-symbols-outlined text-3xl" style="">analytics</span>
+</div>
+<h4 class="text-xl font-bold text-slate-900 dark:text-white mb-3" style="">AI Risk Prediction</h4>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed" style="">Predictive analytics using machine learning to identify potential heart issues before they arise based on your history.</p>
+</div>
+<!-- Feature 2 -->
+<div class="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700 hover:border-primary/50 transition-all">
+<div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-6">
+<span class="material-symbols-outlined text-3xl" style="">monitor_heart</span>
+</div>
+<h4 class="text-xl font-bold text-slate-900 dark:text-white mb-3" style="">Personalized Recs</h4>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed" style="">Actionable diet, exercise, and lifestyle advice tailored specifically to your clinical health data and heart profile.</p>
+</div>
+<!-- Feature 3 -->
+<div class="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700 hover:border-primary/50 transition-all">
+<div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-6">
+<span class="material-symbols-outlined text-3xl" style="">lab_profile</span>
+</div>
+<h4 class="text-xl font-bold text-slate-900 dark:text-white mb-3" style="">Test Tracking</h4>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed" style="">Securely log and monitor your clinical blood tests, ECG results, and blood pressure over time with intuitive charts.</p>
+</div>
+<!-- Feature 4 -->
+<div class="bg-white dark:bg-slate-800 p-8 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700 hover:border-primary/50 transition-all">
+<div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-6">
+<span class="material-symbols-outlined text-3xl" style="">smart_toy</span>
+</div>
+<h4 class="text-xl font-bold text-slate-900 dark:text-white mb-3" style="">Heart Chatbot</h4>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed" style="">24/7 AI assistance powered by medical LLMs to answer your immediate heart health questions and concerns.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- How It Works Section -->
+<section class="py-20 bg-white dark:bg-background-dark" id="how-it-works">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h3 class="text-3xl font-black text-slate-900 dark:text-white" style="">Your Path to a Healthier Heart</h3>
+</div>
+<div class="relative">
+<div class="hidden lg:block absolute top-12 left-0 w-full h-0.5 bg-slate-100 dark:bg-slate-800"></div>
+<div class="grid lg:grid-cols-4 gap-12 lg:gap-8">
+<!-- Step 1 -->
+<div class="relative flex flex-col items-center text-center group">
+<div class="w-24 h-24 bg-white dark:bg-slate-800 border-4 border-slate-50 dark:border-slate-900 rounded-full flex items-center justify-center text-primary shadow-xl z-10 mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl" style="">person_add</span>
+</div>
+<h4 class="text-lg font-bold text-slate-900 dark:text-white mb-2" style="">Create Account</h4>
+<p class="text-slate-500 text-sm" style="">Sign up securely and complete your basic health profile.</p>
+</div>
+<!-- Step 2 -->
+<div class="relative flex flex-col items-center text-center group">
+<div class="w-24 h-24 bg-white dark:bg-slate-800 border-4 border-slate-50 dark:border-slate-900 rounded-full flex items-center justify-center text-primary shadow-xl z-10 mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl" style="">description</span>
+</div>
+<h4 class="text-lg font-bold text-slate-900 dark:text-white mb-2" style="">Enter Results</h4>
+<p class="text-slate-500 text-sm" style="">Input your recent clinical data or sync with your provider.</p>
+</div>
+<!-- Step 3 -->
+<div class="relative flex flex-col items-center text-center group">
+<div class="w-24 h-24 bg-white dark:bg-slate-800 border-4 border-slate-50 dark:border-slate-900 rounded-full flex items-center justify-center text-primary shadow-xl z-10 mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl" style="">memory</span>
+</div>
+<h4 class="text-lg font-bold text-slate-900 dark:text-white mb-2" style="">AI Prediction</h4>
+<p class="text-slate-500 text-sm" style="">Our neural networks analyze 50+ biomarkers instantly.</p>
+</div>
+<!-- Step 4 -->
+<div class="relative flex flex-col items-center text-center group">
+<div class="w-24 h-24 bg-white dark:bg-slate-800 border-4 border-slate-50 dark:border-slate-900 rounded-full flex items-center justify-center text-primary shadow-xl z-10 mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl" style="">verified_user</span>
+</div>
+<h4 class="text-lg font-bold text-slate-900 dark:text-white mb-2" style="">Get Suggestions</h4>
+<p class="text-slate-500 text-sm" style="">Receive a personalized plan vetted by cardiologists.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust & Security Section -->
+<section class="py-20 bg-primary text-white overflow-hidden relative" id="trust">
+<div class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+<div class="grid lg:grid-cols-2 gap-16 items-center">
+<div>
+<h3 class="text-3xl sm:text-4xl font-black mb-6" style="">Your Privacy is Our Primary Responsibility</h3>
+<p class="text-white/80 text-lg mb-8 leading-relaxed" style="">
+                            We understand that medical data is the most sensitive information you own. HeartGuard is built from the ground up with security as the foundation.
+                        </p>
+<ul class="space-y-4">
+<li class="flex items-center gap-3" style="">
+<span class="material-symbols-outlined text-green-300" style="">verified</span>
+<span class="" style="">HIPAA &amp; GDPR Compliant infrastructure</span>
+</li>
+<li class="flex items-center gap-3" style="">
+<span class="material-symbols-outlined text-green-300" style="">verified</span>
+<span class="" style="">End-to-end AES-256 bit encryption</span>
+</li>
+<li class="flex items-center gap-3" style="">
+<span class="material-symbols-outlined text-green-300" style="">verified</span>
+<span class="" style="">Anonymized data for AI training</span>
+</li>
+</ul>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20">
+<span class="material-symbols-outlined text-3xl mb-4" style="">shield</span>
+<h5 class="font-bold mb-1" style="">Secure Storage</h5>
+<p class="text-sm text-white/70" style="">Encrypted databases with multi-layer firewalls.</p>
+</div>
+<div class="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20">
+<span class="material-symbols-outlined text-3xl mb-4" style="">lock</span>
+<h5 class="font-bold mb-1" style="">Zero-Knowledge</h5>
+<p class="text-sm text-white/70" style="">We never sell or share your data with third parties.</p>
+</div>
+<div class="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20">
+<span class="material-symbols-outlined text-3xl mb-4" style="">gpp_good</span>
+<h5 class="font-bold mb-1" style="">Medical Ethics</h5>
+<p class="text-sm text-white/70" style="">Vetted by an independent medical ethics board.</p>
+</div>
+<div class="bg-white/10 backdrop-blur-sm p-6 rounded-2xl border border-white/20">
+<span class="material-symbols-outlined text-3xl mb-4" style="">sync_saved_locally</span>
+<h5 class="font-bold mb-1" style="">Self-Custody</h5>
+<p class="text-sm text-white/70" style="">Export or delete all your data at any time.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-20">
+<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="bg-slate-900 dark:bg-slate-800 rounded-3xl p-8 lg:p-16 text-center relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent"></div>
+<div class="relative z-10">
+<h3 class="text-3xl sm:text-4xl font-black text-white mb-6" style="">Ready to prioritize your heart health?</h3>
+<p class="text-slate-400 text-lg mb-10 max-w-2xl mx-auto" style="">Join over 50,000 proactive individuals who are using HeartGuard to stay ahead of cardiovascular risks.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<button class="bg-primary text-white rounded-xl px-10 py-4 text-lg font-bold shadow-lg hover:bg-primary/90 transition-all" style="">Start Your Risk Assessment</button>
+<button class="bg-white text-slate-900 rounded-xl px-10 py-4 text-lg font-bold hover:bg-slate-100 transition-all" style="">Speak to a Specialist Chatbot</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 pt-16 pb-8">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid md:grid-cols-4 gap-12 mb-12">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-2xl text-primary font-bold" style="">heart_check</span>
+<span class="text-xl font-bold tracking-tight text-slate-900 dark:text-white" style="">HeartGuard</span>
+</div>
+<p class="text-slate-500 text-sm leading-relaxed mb-6" style="">
+                        AI-powered cardiovascular health monitoring and risk prediction platform. Not a replacement for professional medical diagnosis.
+                    </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-primary hover:text-white transition-all" href="#" style=""><span class="material-symbols-outlined text-xl" style="">share</span></a>
+<a class="w-10 h-10 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-400 hover:bg-primary hover:text-white transition-all" href="#" style=""><span class="material-symbols-outlined text-xl" style="">rss_feed</span></a>
+</div>
+</div>
+<div>
+<h5 class="text-slate-900 dark:text-white font-bold mb-6" style="">Product</h5>
+<ul class="space-y-4 text-sm text-slate-500">
+<li class="" style=""><a class="hover:text-primary transition-colors" href="#" style="">Risk Assessment</a></li>
+<li class="" style=""><a class="hover:text-primary transition-colors" href="#" style="">Monitoring Tools</a></li>
+<li class="" style=""><a class="hover:text-primary transition-colors" href="#" style="">For Clinicians</a></li>
+<li class="" style=""><a class="hover:text-primary transition-colors" href="#" style="">API Access</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-slate-900 dark:text-white font-bold mb-6" style="">Resources</h5>
+<ul class="space-y-4 text-sm text-slate-500">
+<li class="" style=""><a class="hover:text-primary transition-colors" href="#" style="">Medical Blog</a></li>
+<li class="" style=""><a class="hover:text-primary transition-colors" href="#" style="">Research Papers</a></li>
+<li class="" style=""><a class="hover:text-primary transition-colors" href="#" style="">Cardiologist Directory</a></li>
+<li class="" style=""><a class="hover:text-primary transition-colors" href="#" style="">Support Center</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-slate-900 dark:text-white font-bold mb-6" style="">Company</h5>
+<ul class="space-y-4 text-sm text-slate-500">
+<li class="" style=""><a class="hover:text-primary transition-colors" href="#" style="">About Us</a></li>
+<li class="" style=""><a class="hover:text-primary transition-colors" href="#" style="">Our Team</a></li>
+<li class="" style=""><a class="hover:text-primary transition-colors" href="#" style="">Privacy Policy</a></li>
+<li class="" style=""><a class="hover:text-primary transition-colors" href="#" style="">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-slate-200 dark:border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-xs text-slate-500" style="">© 2024 HeartGuard AI Technologies Inc. All rights reserved.</p>
+<div class="flex gap-6 text-xs text-slate-500">
+<span class="" style="">English (US)</span>
+<a class="hover:text-primary transition-colors" href="#" style="">Cookies</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

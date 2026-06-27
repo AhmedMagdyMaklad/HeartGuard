@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Login | HeartGuard - Your Heart Health Partner</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              colors: {
+                "primary": "#083fb4",
+                "background-light": "#f5f6f8",
+                "background-dark": "#101622",
+              },
+              fontFamily: {
+                "display": ["Inter"]
+              },
+              borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+            },
+          },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FFFCFB; /* Requested Off-White */
+        }
+    </style>
+</head>
+<body class="bg-[#FFFCFB] text-slate-900 min-h-screen flex items-center justify-center p-4">
+<div class="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-2 gap-0 bg-white rounded-xl shadow-xl overflow-hidden border border-slate-100">
+<!-- Left Side: Login Form -->
+<div class="p-8 lg:p-16 flex flex-col justify-center">
+<!-- Header/Logo Area -->
+<div class="flex items-center gap-2 mb-10">
+<div class="size-10 flex items-center justify-center bg-primary rounded-lg text-white">
+<span class="material-symbols-outlined text-2xl">favorite</span>
+</div>
+<h1 class="text-2xl font-bold tracking-tight text-slate-900">HeartGuard</h1>
+</div>
+<div class="mb-8">
+<h2 class="text-3xl font-extrabold text-slate-900 mb-2">Welcome Back</h2>
+<p class="text-slate-500">Enter your credentials to access your heart health dashboard.</p>
+</div>
+<form class="space-y-6">
+<!-- Email Input -->
+<div class="space-y-2">
+<label class="text-sm font-semibold text-slate-700 ml-1" for="email">Email Address</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">mail</span>
+<input class="w-full pl-12 pr-4 py-3.5 rounded-lg border border-slate-200 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all outline-none" id="email" placeholder="name@example.com" type="email"/>
+</div>
+</div>
+<!-- Password Input -->
+<div class="space-y-2">
+<div class="flex justify-between items-center ml-1">
+<label class="text-sm font-semibold text-slate-700" for="password">Password</label>
+<a class="text-xs font-semibold text-primary hover:underline" href="#">Forgot Password?</a>
+</div>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">lock</span>
+<input class="w-full pl-12 pr-12 py-3.5 rounded-lg border border-slate-200 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all outline-none" id="password" placeholder="Enter your password" type="password"/>
+<button class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600" type="button">
+<span class="material-symbols-outlined">visibility</span>
+</button>
+</div>
+</div>
+<!-- Remember Me -->
+<div class="flex items-center gap-2">
+<input class="rounded border-slate-300 text-primary focus:ring-primary" id="remember" type="checkbox"/>
+<label class="text-sm text-slate-600" for="remember">Stay logged in for 30 days</label>
+</div>
+<!-- Action Button -->
+<button class="w-full bg-primary hover:bg-blue-800 text-white font-bold py-4 rounded-lg shadow-lg shadow-primary/30 transition-all active:scale-[0.98]" type="submit">
+                    Sign In to Dashboard
+                </button>
+</form>
+<div class="mt-10 text-center">
+<p class="text-slate-500">
+                    New to HeartGuard? 
+                    <a class="text-primary font-bold hover:underline ml-1" href="#">Create an Account</a>
+</p>
+</div>
+<!-- Footer Links -->
+<div class="mt-12 flex justify-center gap-6 text-xs text-slate-400">
+<a class="hover:text-slate-600" href="#">Privacy Policy</a>
+<a class="hover:text-slate-600" href="#">Terms of Service</a>
+<a class="hover:text-slate-600" href="#">Help Center</a>
+</div>
+</div>
+<!-- Right Side: Illustration & Branding -->
+<div class="hidden lg:flex relative bg-slate-50 items-center justify-center p-12 overflow-hidden">
+<!-- Decorative Elements -->
+<div class="absolute top-0 right-0 p-10 opacity-10">
+<span class="material-symbols-outlined text-9xl">ecg_heart</span>
+</div>
+<div class="absolute bottom-0 left-0 p-10 opacity-10">
+<span class="material-symbols-outlined text-9xl">monitor_heart</span>
+</div>
+<div class="relative z-10 w-full max-w-md text-center">
+<div class="mb-8 relative inline-block">
+<!-- Placeholder for Medical Illustration -->
+<div class="w-72 h-72 rounded-full bg-primary/5 flex items-center justify-center mx-auto border-4 border-white shadow-2xl overflow-hidden" data-alt="Doctor holding a digital heart health monitor tablet" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCusWHQ-1LmtDuHg67qNp6nZcjtAk1KLz51NCZq7junMhV8AcglprXjPkgjckOvZmCID2T7TMbQ0jBkLElms5UkO7OyU5rX1UaWBvW2cKJ1TfsMa-vEGPPyUA6pgeiFM3nYySW-OsfT4jGbb_MlW200Pnqs_raLf4FrUxi5lVTcVsrvUG1Dwht3t2CBRUWDMUCPecGua2bm07dUNW5Tzj6KGp1cK-zdDhAEK2FJZzomBx3DUxKeohx-f0rBLWWyR3kWK02-gZT6k2M'); background-size: cover; background-position: center;">
+</div>
+<!-- Stats Badge Over Image -->
+<div class="absolute -bottom-4 -right-4 bg-white p-4 rounded-xl shadow-xl flex items-center gap-3 border border-slate-100">
+<div class="bg-red-100 text-red-600 p-2 rounded-lg">
+<span class="material-symbols-outlined">favorite</span>
+</div>
+<div class="text-left">
+<p class="text-xs text-slate-500 font-medium">BPM Range</p>
+<p class="text-lg font-bold text-slate-900">72 - 84</p>
+</div>
+</div>
+</div>
+<h3 class="text-2xl font-bold text-slate-900 mb-4">Precision Monitoring for Your Heart</h3>
+<p class="text-slate-600 leading-relaxed mb-8">
+                    HeartGuard uses advanced AI to track your cardiovascular health in real-time, providing actionable insights to keep your heart strong.
+                </p>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-white/80 backdrop-blur p-4 rounded-xl border border-slate-100 shadow-sm">
+<span class="material-symbols-outlined text-primary mb-2">verified_user</span>
+<p class="text-sm font-bold">HIPAA Compliant</p>
+</div>
+<div class="bg-white/80 backdrop-blur p-4 rounded-xl border border-slate-100 shadow-sm">
+<span class="material-symbols-outlined text-primary mb-2">bolt</span>
+<p class="text-sm font-bold">Instant Analysis</p>
+</div>
+</div>
+</div>
+<!-- Background subtle pattern -->
+<div class="absolute inset-0 z-0 opacity-[0.03]" style="background-image: radial-gradient(#083fb4 2px, transparent 2px); background-size: 32px 32px;"></div>
+</div>
+</div>
+</body></html>

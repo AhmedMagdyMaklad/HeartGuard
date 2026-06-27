@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HeartGuard - Onboarding Step 3</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#083fb4",
+                        "background-light": "#fffcfb",
+                        "background-dark": "#101622",
+                        "slate-custom": "#48639d",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .checkbox-custom:checked {
+            background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col items-center">
+<div class="w-full max-w-[960px] flex flex-col grow px-6 py-8">
+<header class="flex items-center justify-between border-b border-primary/10 pb-6 mb-8">
+<div class="flex items-center gap-3 text-primary">
+<span class="material-symbols-outlined text-3xl font-bold">favorite</span>
+<h2 class="text-xl font-extrabold tracking-tight">HeartGuard</h2>
+</div>
+<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-primary/10 text-primary hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined">close</span>
+</button>
+</header>
+<main class="flex flex-col gap-8">
+<div class="flex flex-col gap-3">
+<div class="flex justify-between items-end">
+<div class="flex flex-col">
+<span class="text-primary font-bold text-sm uppercase tracking-wider">Onboarding</span>
+<p class="text-slate-900 dark:text-slate-100 text-lg font-semibold">Step 3 of 3</p>
+</div>
+<p class="text-primary text-sm font-bold">100%</p>
+</div>
+<div class="h-3 w-full bg-primary/10 rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 100%;"></div>
+</div>
+<p class="text-slate-custom dark:text-slate-400 text-sm">Finalizing your profile for personalized care.</p>
+</div>
+<div class="flex flex-col gap-2">
+<h1 class="text-4xl font-black text-slate-900 dark:text-slate-100 tracking-tight">Your Medical History</h1>
+<p class="text-slate-custom dark:text-slate-400 text-lg max-w-2xl">Previous health conditions help us assess your risk more accurately and tailor your wellness plan.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<label class="flex items-center justify-between p-5 rounded-xl border-2 border-primary/10 bg-white dark:bg-slate-800 shadow-sm hover:border-primary/30 cursor-pointer transition-all">
+<span class="text-slate-900 dark:text-slate-100 font-semibold text-base">Hypertension</span>
+<input class="checkbox-custom h-6 w-6 rounded border-primary/20 text-primary focus:ring-primary focus:ring-offset-0 transition-all" type="checkbox"/>
+</label>
+<label class="flex items-center justify-between p-5 rounded-xl border-2 border-primary/10 bg-white dark:bg-slate-800 shadow-sm hover:border-primary/30 cursor-pointer transition-all">
+<span class="text-slate-900 dark:text-slate-100 font-semibold text-base">Diabetes</span>
+<input class="checkbox-custom h-6 w-6 rounded border-primary/20 text-primary focus:ring-primary focus:ring-offset-0 transition-all" type="checkbox"/>
+</label>
+<label class="flex items-center justify-between p-5 rounded-xl border-2 border-primary/10 bg-white dark:bg-slate-800 shadow-sm hover:border-primary/30 cursor-pointer transition-all">
+<span class="text-slate-900 dark:text-slate-100 font-semibold text-base">Stroke</span>
+<input class="checkbox-custom h-6 w-6 rounded border-primary/20 text-primary focus:ring-primary focus:ring-offset-0 transition-all" type="checkbox"/>
+</label>
+<label class="flex items-center justify-between p-5 rounded-xl border-2 border-primary/10 bg-white dark:bg-slate-800 shadow-sm hover:border-primary/30 cursor-pointer transition-all">
+<span class="text-slate-900 dark:text-slate-100 font-semibold text-base">High Blood Pressure</span>
+<input class="checkbox-custom h-6 w-6 rounded border-primary/20 text-primary focus:ring-primary focus:ring-offset-0 transition-all" type="checkbox"/>
+</label>
+</div>
+<div class="mt-4 p-6 rounded-xl border-2 border-dashed border-primary/20 bg-primary/5 flex flex-col @md:flex-row items-center gap-6">
+<div class="bg-primary/10 p-3 rounded-full text-primary">
+<span class="material-symbols-outlined text-3xl">biotech</span>
+</div>
+<div class="flex-1 text-center @md:text-left">
+<h3 class="text-slate-900 dark:text-slate-100 font-bold text-lg leading-tight mb-1">Medical Test Results</h3>
+<p class="text-slate-custom dark:text-slate-400">After completing this profile, you will be prompted to enter your specific clinical laboratory results.</p>
+</div>
+<div class="shrink-0">
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-14 h-7 bg-slate-200 peer-focus:outline-none rounded-full peer dark:bg-slate-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[4px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-6 after:w-6 after:transition-all dark:border-gray-600 peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row items-center justify-between gap-4 mt-10 pt-8 border-t border-primary/10">
+<button class="w-full sm:w-auto px-8 py-4 rounded-xl font-bold text-primary bg-primary/10 hover:bg-primary/20 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-xl">arrow_back</span>
+                    Back
+                </button>
+<button class="w-full sm:w-auto px-10 py-4 rounded-xl font-bold text-white bg-primary hover:opacity-90 shadow-lg shadow-primary/30 transition-all flex items-center justify-center gap-2">
+                    Complete Profile
+                    <span class="material-symbols-outlined text-xl">check_circle</span>
+</button>
+</div>
+</main>
+<footer class="mt-auto py-10 text-center text-slate-custom/60 text-sm">
+            © 2024 HeartGuard Health. All rights reserved. Your data is encrypted and secure.
+        </footer>
+</div>
+</body></html>

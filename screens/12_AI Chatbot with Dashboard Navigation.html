@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HeartGuard AI - Professional Health Assistant</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#083fb4",
+                        "background-light": "#FFFCFB",
+                        "background-dark": "#101622",
+                        "accent-pink": "#FFD8D8",
+                        "card-bg": "#FFFFFF",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.8rem",
+                        "xl": "1.25rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .glass-effect { background: rgba(255, 252, 251, 0.8); backdrop-filter: blur(8px); }
+        .chat-shadow { box-shadow: 0 4px 15px -3px rgba(8, 63, 180, 0.05); }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<div class="relative flex h-screen w-full overflow-hidden">
+<!-- Sidebar Navigation -->
+<aside class="w-80 flex-shrink-0 border-r border-primary/10 bg-white dark:bg-background-dark/50 flex flex-col">
+<div class="p-6 border-b border-primary/5">
+<div class="flex items-center gap-3">
+<div class="bg-primary size-10 rounded-xl flex items-center justify-center text-white">
+<span class="material-symbols-outlined">favorite</span>
+</div>
+<div>
+<h1 class="text-primary text-lg font-bold leading-tight">HeartGuard</h1>
+<p class="text-slate-500 text-xs font-medium uppercase tracking-wider">Digital Health AI</p>
+</div>
+</div>
+<button class="mt-8 w-full flex items-center justify-center gap-2 bg-primary text-white rounded-xl py-3 px-4 font-semibold hover:bg-primary/90 transition-all shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-sm">add</span>
+<span>New Consultation</span>
+</button>
+</div>
+<div class="flex-1 overflow-y-auto p-4 flex flex-col gap-2">
+<p class="px-3 text-xs font-semibold text-slate-400 uppercase tracking-widest mb-2">Recent History</p>
+<!-- Chat History Items -->
+<div class="flex items-center gap-3 px-3 py-3 rounded-xl bg-primary/5 border border-primary/10 cursor-pointer">
+<span class="material-symbols-outlined text-primary">chat_bubble</span>
+<div class="flex-1 overflow-hidden">
+<p class="text-sm font-semibold truncate">Cholesterol Management</p>
+<p class="text-[11px] text-slate-500">2 hours ago</p>
+</div>
+</div>
+<div class="flex items-center gap-3 px-3 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary">history</span>
+<div class="flex-1 overflow-hidden">
+<p class="text-sm font-medium truncate">Risk Assessment Result</p>
+<p class="text-[11px] text-slate-500">Yesterday</p>
+</div>
+</div>
+<div class="flex items-center gap-3 px-3 py-3 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-slate-400 group-hover:text-primary">history</span>
+<div class="flex-1 overflow-hidden">
+<p class="text-sm font-medium truncate">Daily Exercise Routine</p>
+<p class="text-[11px] text-slate-500">3 days ago</p>
+</div>
+</div>
+</div>
+<!-- Sidebar Bottom Profile -->
+<div class="p-4 border-t border-primary/5 bg-slate-50/50 dark:bg-transparent">
+<div class="flex items-center gap-3 p-2 rounded-xl">
+<div class="relative">
+<img class="size-10 rounded-full object-cover" data-alt="User profile picture with calm expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQVGdTl1cmw-WpY5GueMZTUjyWoLhX3OrnyjdogtGwvGjc3aLDHe3H5UGcSCeWEYomCF0aZCpFG9HEU6CcNlohWAmMjMETAecNwHfL8xoWQS8FKmavEX9txqLqECRCzIxPs2Wi6js9g94arGjsr8eoORoIc3m1jMN9QVuKpYaTem_lTEQ2Y_4Th5nTVNRcvbgXXirzi62R8Onkn6Bw6dCXBp522gU6_BXUofiiaMrIQSOVvHqCvWhCEwOMqeavx9wguVMGtsb4nHo"/>
+<div class="absolute bottom-0 right-0 size-3 bg-green-500 border-2 border-white rounded-full"></div>
+</div>
+<div class="flex-1">
+<p class="text-sm font-bold">Alex Johnson</p>
+<p class="text-[11px] text-slate-500">Premium Member</p>
+</div>
+<span class="material-symbols-outlined text-slate-400 cursor-pointer hover:text-primary">settings</span>
+</div>
+</div>
+</aside>
+<!-- Main Chat Area -->
+<main class="flex-1 flex flex-col bg-background-light dark:bg-background-dark relative">
+<!-- Header -->
+<header class="h-20 border-b border-primary/5 px-8 flex items-center justify-between bg-white/80 dark:bg-background-dark/80 backdrop-blur-md sticky top-0 z-10">
+<div class="flex items-center gap-4">
+<div class="size-12 rounded-full bg-accent-pink flex items-center justify-center relative overflow-hidden">
+<img class="w-full h-full object-cover opacity-90" data-alt="Medical professional avatar icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlcqMqzeJKlcXIgXN4GiOKxt9xzhO8vcTXcNYrNbXHJ2z7PxL6a7JzIZbiC7FKlbb11FQCUEw9cfsE1rHpbP4iXIe1YbE_TsebqNFRZiELxv5ZNabR_GTt-KbbhNaINJ4qehLgaX6-DErLXp48ApCNaOiEsML_C0bln8_uSnifhsU1ESW8XeUCZLy3nUbdnzkiJPvw0BeNbDujKyAtqBne3MZn__bO7MY9JELcUJuS3A07lA0YJHDCKwOiPIPH1Vh-nQBGzoLrybQ"/>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h2 class="text-base font-bold text-primary">HeartGuard AI Assistant</h2>
+<span class="px-2 py-0.5 rounded-full bg-green-100 text-green-700 text-[10px] font-bold uppercase">Online</span>
+</div>
+<p class="text-xs text-slate-500 font-medium">Verified Medical Intelligence</p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<button class="p-2 rounded-lg text-slate-500 hover:bg-slate-100 transition-colors">
+<span class="material-symbols-outlined">videocam</span>
+</button>
+<button class="p-2 rounded-lg text-slate-500 hover:bg-slate-100 transition-colors">
+<span class="material-symbols-outlined">info</span>
+</button>
+<div class="h-6 w-[1px] bg-slate-200 mx-2"></div>
+<button class="flex items-center gap-2 bg-slate-100 text-slate-700 px-4 py-2 rounded-lg text-sm font-semibold hover:bg-slate-200 transition-all">
+<span class="material-symbols-outlined text-sm">chevron_left</span>
+                        Dashboard
+                    </button>
+</div>
+</header>
+<!-- Message List -->
+<div class="flex-1 overflow-y-auto px-8 py-8 flex flex-col gap-8 max-w-4xl mx-auto w-full">
+<!-- System Time -->
+<div class="flex justify-center">
+<span class="text-[11px] font-semibold text-slate-400 bg-slate-100 dark:bg-slate-800 px-3 py-1 rounded-full uppercase tracking-tighter">Today, 10:24 AM</span>
+</div>
+<!-- Bot Message -->
+<div class="flex gap-4 max-w-[85%]">
+<div class="size-10 rounded-full bg-accent-pink flex-shrink-0 flex items-center justify-center text-primary border-2 border-white shadow-sm overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="AI assistant avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBn9cgGZvLhdRUBnAPSYT6Mg9j04CZ3yHD3ees1znbZH2_31fmhYy7jx3734vLw2CdU7BkK5GjFjCpmchfVz5ei-Vp_4s3ZzI8HBIYcls74eaKC_UWiwH8UBcD5XbW1cHJxCOpgR3Wg34PNP90Ha5BMBvWbaTarsHcZ7qK0AGxFvjxi0yRNXlbzgZ48uZvb1oVWzJgbaf8zBjIC2VdlrrLl1pd8PGsmkoUuXoCehLNa0c-srPkSYjgflzzTzMAuye89fynepb-IutA"/>
+</div>
+<div class="flex flex-col gap-2">
+<div class="bg-white dark:bg-slate-800 p-4 rounded-xl rounded-tl-none border border-primary/5 chat-shadow">
+<p class="text-sm leading-relaxed">Hello Alex! I've analyzed your recent lab results from yesterday. I noticed your LDL cholesterol is slightly above the target range (142 mg/dL). </p>
+<p class="text-sm leading-relaxed mt-3">Would you like to discuss dietary changes, or should I explain what these numbers mean for your overall risk score?</p>
+</div>
+<p class="text-[10px] text-slate-400 font-medium ml-1">HeartGuard AI • 10:25 AM</p>
+</div>
+</div>
+<!-- User Message -->
+<div class="flex gap-4 max-w-[85%] self-end flex-row-reverse">
+<div class="size-10 rounded-full bg-primary/10 flex-shrink-0 flex items-center justify-center border-2 border-white shadow-sm overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="User avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoyuR32LAcySlmMqcdzXSJe8uRlsWiV5K3ejvZ1mWtHASQmZbE2XtIL8QS9n2t2RpJhPEK9tDQUXNX3cy_5GBR2RgtZ1PDaxJLWtYGk0-DzRcX6k8tV3rTeRiU4txTMniTmQmuXJleiGB-T0PUjZb1wML0K_A_UnTJH9ZtHfPOTzM9RiMfhZsZUcw_86yL8Dzj0Y-JXwzKpZmtN1owC5scYqZAZq0hMArqO3uadj2cVhG2L3jfTE1wMqOaXkDtFZZB6Yo9jxodoQk"/>
+</div>
+<div class="flex flex-col gap-2 items-end">
+<div class="bg-primary text-white p-4 rounded-xl rounded-tr-none shadow-lg shadow-primary/20">
+<p class="text-sm leading-relaxed">I'm a bit concerned about that LDL number. How can I reduce my cholesterol through my diet before my next checkup?</p>
+</div>
+<p class="text-[10px] text-slate-400 font-medium mr-1">Read • 10:27 AM</p>
+</div>
+</div>
+<!-- Bot Message with Data -->
+<div class="flex gap-4 max-w-[85%]">
+<div class="size-10 rounded-full bg-accent-pink flex-shrink-0 flex items-center justify-center text-primary border-2 border-white shadow-sm overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="AI assistant avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuI5iOBiRk0vejjxwsq7k6hwh56ocInkIncMPqX5sl2r00Qu1qjWPR6JCeC7P5g8TpiwCVXqfZS6_uvieEq5qE_P42WT9qk31HYA1EmJBeAw9bULk7z71P65WO091CyvWh7BXDXQAx7hk-cievq413l0LD4x3ox4KZm0fYaSXBqZGSsNUUgTnD7g7Aca0j56ttH_8sFcl1fVk2YIaxOJGlOLbkER9T1G7owaUOX7e3Yhe0MFZ4BfO0T8nhCPkLFgjsmM3LMZtYLlU"/>
+</div>
+<div class="flex flex-col gap-2">
+<div class="bg-white dark:bg-slate-800 p-4 rounded-xl rounded-tl-none border border-primary/5 chat-shadow">
+<p class="text-sm leading-relaxed">That's a great proactive approach. Based on your profile, here are three key dietary adjustments recommended by the AHA:</p>
+<ul class="mt-4 space-y-3">
+<li class="flex gap-3 text-sm">
+<span class="material-symbols-outlined text-green-500 text-lg">check_circle</span>
+<span>Increase soluble fiber (oats, beans, lentils)</span>
+</li>
+<li class="flex gap-3 text-sm">
+<span class="material-symbols-outlined text-green-500 text-lg">check_circle</span>
+<span>Swap saturated fats for unsaturated fats (olive oil, avocados)</span>
+</li>
+<li class="flex gap-3 text-sm">
+<span class="material-symbols-outlined text-green-500 text-lg">check_circle</span>
+<span>Incorporate fatty fish twice a week</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Suggested Prompts -->
+<div class="flex flex-wrap gap-2 pt-4">
+<button class="px-4 py-2 rounded-full border border-primary/20 bg-white text-primary text-xs font-semibold hover:bg-primary hover:text-white transition-all">
+                        Show me a heart-healthy meal plan
+                    </button>
+<button class="px-4 py-2 rounded-full border border-primary/20 bg-white text-primary text-xs font-semibold hover:bg-primary hover:text-white transition-all">
+                        Explain my risk score
+                    </button>
+<button class="px-4 py-2 rounded-full border border-primary/20 bg-white text-primary text-xs font-semibold hover:bg-primary hover:text-white transition-all">
+                        Can I exercise with high LDL?
+                    </button>
+</div>
+</div>
+<!-- Input Area -->
+<div class="px-8 pb-8 pt-4 max-w-4xl mx-auto w-full">
+<div class="relative bg-white dark:bg-slate-800 rounded-2xl border border-primary/10 shadow-2xl shadow-primary/5 p-2 flex items-center gap-2 group focus-within:ring-2 ring-primary/20 transition-all">
+<button class="p-3 text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">attach_file</span>
+</button>
+<input class="flex-1 border-none focus:ring-0 text-sm bg-transparent placeholder:text-slate-400 py-4" placeholder="Describe your symptoms or ask a heart-health question..." type="text"/>
+<button class="p-3 text-slate-400 hover:text-primary transition-colors">
+<span class="material-symbols-outlined">mic</span>
+</button>
+<button class="bg-primary text-white size-12 rounded-xl flex items-center justify-center hover:bg-primary/90 transition-all shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+<p class="text-center text-[10px] text-slate-400 mt-4 font-medium uppercase tracking-widest">
+                    HeartGuard AI is for informational purposes. Always consult with a doctor for medical emergencies.
+                </p>
+</div>
+</main>
+<!-- Right Insights Sidebar (Optional but adds to medical aesthetic) -->
+<aside class="w-72 border-l border-primary/10 bg-white dark:bg-background-dark/50 p-6 flex flex-col gap-6 hidden xl:flex">
+<div>
+<h3 class="text-sm font-bold text-slate-900 dark:text-slate-100 mb-4">Current Health Score</h3>
+<div class="bg-primary/5 rounded-2xl p-4 border border-primary/10 flex flex-col items-center">
+<div class="relative size-24 flex items-center justify-center">
+<svg class="size-full -rotate-90" viewbox="0 0 36 36">
+<circle class="stroke-slate-200" cx="18" cy="18" fill="none" r="16" stroke-width="2"></circle>
+<circle class="stroke-primary" cx="18" cy="18" fill="none" r="16" stroke-dasharray="78, 100" stroke-linecap="round" stroke-width="2"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="text-xl font-bold text-primary">78</span>
+<span class="text-[8px] text-slate-500 font-bold uppercase">Fair</span>
+</div>
+</div>
+<p class="text-[11px] text-center text-slate-500 mt-3 font-medium">Your score increased by 4% this month</p>
+</div>
+</div>
+<div>
+<h3 class="text-sm font-bold text-slate-900 dark:text-slate-100 mb-4">Vital Signs</h3>
+<div class="space-y-3">
+<div class="flex items-center justify-between p-3 bg-slate-50 dark:bg-slate-800/50 rounded-xl">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-rose-500 text-lg">favorite</span>
+<span class="text-xs font-semibold">BPM</span>
+</div>
+<span class="text-xs font-bold">72</span>
+</div>
+<div class="flex items-center justify-between p-3 bg-slate-50 dark:bg-slate-800/50 rounded-xl">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-blue-500 text-lg">water_drop</span>
+<span class="text-xs font-semibold">Blood Pressure</span>
+</div>
+<span class="text-xs font-bold">118/79</span>
+</div>
+</div>
+</div>
+<div class="mt-auto">
+<div class="bg-accent-pink/30 p-4 rounded-xl border border-accent-pink">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-slate-700 text-sm">tips_and_updates</span>
+<h4 class="text-[11px] font-bold text-slate-900 uppercase">Pro Tip</h4>
+</div>
+<p class="text-[11px] leading-relaxed text-slate-700">Take a 10-minute walk after lunch to help regulate your blood sugar and cardiovascular flow.</p>
+</div>
+</div>
+</aside>
+</div>
+</body></html>

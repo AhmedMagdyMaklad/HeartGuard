@@ -1,0 +1,20 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "rNsAkQFhXz_qMwqrhBb9e"
+uri = "file://heartguard-screenshots.zip"
+type = "unspecified"
+title = "HeartGuard — All Screen Screenshots"
+
+[[outputs]]
+id = "Tm72prn67sTEulnBOpAsg"
+uri = "file://screenshots/heartguard-erd.jpg"
+type = "image"
+title = "HeartGuard ERD — Entity Relationship Diagram"
+
+[[outputs]]
+id = "ri1nud9sc3r7E4UF02CL-"
+uri = "file://heartguard-erd-assets.zip"
+type = "unspecified"
+title = "ERD Image + SQL Schema (ZIP)"

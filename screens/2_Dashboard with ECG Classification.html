@@ -1,0 +1,229 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#083fb4",
+                        "background-light": "#FFFCFB",
+                        "soft-pink": "#FFD8D8",
+                        "accent-red": "#ED3500",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
+                },
+            },
+        }</script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="bg-background-light font-display text-slate-900">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Header/Navigation -->
+<header class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-6 py-3 sticky top-0 z-50">
+<div class="flex items-center gap-4">
+<div class="flex items-center justify-center bg-primary rounded-lg p-2 text-white">
+<span class="material-symbols-outlined" style="">favorite</span>
+</div>
+<h2 class="text-xl font-bold tracking-tight" style="">HeartGuard</h2>
+</div>
+<div class="flex items-center gap-6">
+<nav class="hidden md:flex gap-6">
+<a class="text-primary font-semibold text-sm" href="#" style="">Dashboard</a>
+<a class="text-slate-500 dark:text-slate-400 font-medium text-sm hover:text-primary transition-colors" href="#" style=""><br></a>
+<a class="text-slate-500 dark:text-slate-400 font-medium text-sm hover:text-primary transition-colors" href="#" style=""><br></a>
+</nav>
+<div class="flex items-center gap-2 border-l border-slate-200 dark:border-slate-800 pl-6">
+<button class="flex items-center justify-center rounded-full h-10 w-10 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300" style="">
+<span class="material-symbols-outlined text-xl" style="">notifications</span>
+</button>
+<div class="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center overflow-hidden border-2 border-primary/20">
+<img class="h-full w-full object-cover" data-alt="User profile picture of a professional man" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAh8I2c3-ILGMa3UoZvQA_o0i6mAqlaw1l3aFgo6wBB9UrXt-x8idjQIUC5tNUKQlCSq5ATdQlpEVSuKS5GXx16grJsKyFqRudJK43cPAcYITMj6cMSW01WOf-IBk8D03Jjdt158FOLU3tXdsLA4Da8c73FDkx4auVwIi_eXvNrOvVAWLtjV1nePXm2u9IUD6am0i7Q2O_UxjqkBJOrAhjXhz-HWjxkQkS_GOFCFwRLkhR_UXeWMVJ4_5QpUldlKZQ_TB-Xmf0xayY" style="">
+</div>
+</div>
+</div>
+</header>
+<main class="flex-1 max-w-[1280px] mx-auto w-full p-6 space-y-8">
+<!-- Welcome Section -->
+<div class="flex flex-col gap-6">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<h1 class="text-3xl font-black tracking-tight text-slate-900" style="">Welcome back, Alex</h1>
+<p class="text-slate-500 mt-1" style="">Your health data is synced and up to date as of 9:41 AM.</p>
+</div>
+</div>
+<div class="flex flex-wrap gap-4 bg-white p-4 rounded-2xl shadow-sm border border-slate-100">
+<button class="flex-1 min-w-[200px] flex items-center justify-center gap-2 bg-primary text-white px-6 py-3.5 rounded-xl font-bold text-sm hover:opacity-90 transition-opacity shadow-lg shadow-primary/20" style="">
+<span class="material-symbols-outlined text-xl" style="">restart_alt</span>Take Risk Assessment
+    </button>
+<button class="flex-1 min-w-[200px] flex items-center justify-center gap-2 bg-primary/5 border-2 border-primary/20 text-primary px-6 py-3.5 rounded-xl font-bold text-sm hover:bg-primary/10 hover:shadow-md transition-all shadow-sm" style=""><span class="material-symbols-outlined text-xl" style="font-variation-settings: &quot;FILL&quot; 1, &quot;wght&quot; 400, &quot;GRAD&quot; 0, &quot;opsz&quot; 24;">smart_toy</span> Ask AI Assistant</button>
+</div>
+</div>
+<div class="flex flex-col gap-8">
+<!-- Top Row: Risk Score and Latest Results -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Risk Score Gauge -->
+<div class="lg:col-span-4 bg-white dark:bg-slate-900 rounded-2xl p-8 shadow-sm border border-slate-100 dark:border-slate-800 flex flex-col items-center justify-center text-center">
+<div class="flex items-center justify-between w-full mb-8">
+<h3 class="font-bold text-slate-500 dark:text-slate-400 uppercase text-xs tracking-widest" style="">Heart Health Risk</h3>
+<span class="material-symbols-outlined text-primary" style="">info</span>
+</div>
+<div class="relative flex items-center justify-center mb-8">
+<svg class="w-56 h-56 transform -rotate-90">
+<circle class="text-slate-100 dark:text-slate-800" cx="112" cy="112" fill="transparent" r="104" stroke="currentColor" stroke-width="12"></circle>
+<circle class="text-primary" cx="112" cy="112" fill="transparent" r="104" stroke="currentColor" stroke-dasharray="653.45" stroke-dashoffset="490.09" stroke-linecap="round" stroke-width="12"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="text-6xl font-black text-primary" style="">25</span>
+<span class="text-sm font-bold text-slate-500 dark:text-slate-400 mt-1 uppercase" style="">Optimal</span>
+</div>
+</div>
+<div class="w-full flex justify-between text-[10px] font-bold text-slate-400 dark:text-slate-500 mb-2 px-2">
+<span class="" style="">LOW</span>
+<span class="" style="">MEDIUM</span>
+<span class="" style="">HIGH</span>
+</div>
+<div class="w-full h-2 bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden flex">
+<div class="h-full w-1/3 bg-green-500/30"></div>
+<div class="h-full w-1/3 bg-yellow-500/30"></div>
+<div class="h-full w-1/3 bg-red-500/30"></div>
+</div>
+<p class="mt-8 text-sm text-slate-600 dark:text-slate-400 leading-relaxed" style="">
+                Your risk score has decreased by <span class="text-primary font-bold" style="">4 points</span> since last month. Keep up the cardio!
+            </p>
+</div>
+<!-- Health Overview / Latest Results -->
+<div class="lg:col-span-8 flex flex-col gap-6">
+<h3 class="font-bold text-lg text-slate-900 px-1" style="">Latest Test Results</h3>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+<div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100">
+<p class="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-3" style="">Cholesterol</p>
+<div class="flex items-baseline gap-1 mb-3">
+<span class="text-2xl font-bold text-slate-900" style="">142</span>
+<span class="text-xs text-slate-400" style="">mg/dL</span>
+</div>
+<div class="text-[10px] font-bold text-green-600 bg-green-50 w-fit px-2 py-1 rounded-full" style="">NORMAL</div>
+</div>
+<div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100">
+<p class="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-3" style="">BMI</p>
+<div class="flex items-baseline gap-1 mb-3">
+<span class="text-2xl font-bold text-slate-900" style="">23.4</span>
+<span class="text-xs text-slate-400" style="">kg/m²</span>
+</div>
+<div class="text-[10px] font-bold text-green-600 bg-green-50 w-fit px-2 py-1 rounded-full" style="">HEALTHY</div>
+</div>
+<div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100">
+<p class="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-3" style="">Heart Rate</p>
+<div class="flex items-baseline gap-1 mb-3">
+<span class="text-2xl font-bold text-slate-900" style="">72</span>
+<span class="text-xs text-slate-400" style="">bpm</span>
+</div>
+<div class="text-[10px] font-bold text-green-600 bg-green-50 w-fit px-2 py-1 rounded-full" style="">STABLE</div>
+</div>
+<div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100">
+<p class="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-3" style="">Glucose</p>
+<div class="flex items-baseline gap-1 mb-3">
+<span class="text-2xl font-bold text-slate-900" style="">98</span>
+<span class="text-xs text-slate-400" style="">mg/dL</span>
+</div>
+<div class="text-[10px] font-bold text-amber-600 bg-amber-50 w-fit px-2 py-1 rounded-full" style="">OPTIMAL</div>
+</div>
+<div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100">
+<p class="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-3" style="">Pulse Pressure</p>
+<div class="flex items-baseline gap-1 mb-3">
+<span class="text-2xl font-bold text-slate-900" style="">43</span>
+<span class="text-xs text-slate-400" style="">mmHg</span>
+</div>
+<div class="text-[10px] font-bold text-green-600 bg-green-50 w-fit px-2 py-1 rounded-full" style="">NORMAL</div>
+</div>
+<div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-100 flex flex-col justify-between">
+<div>
+<p class="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-3" style="">ECG Classification</p>
+<div class="flex items-baseline gap-1 mb-3">
+<span class="text-lg font-bold text-slate-900 leading-tight" style="">Normal Rhythm</span>
+</div>
+</div>
+<div class="text-[10px] font-bold text-green-600 bg-green-50 w-fit px-2 py-1 rounded-full uppercase" style="">Normal</div>
+</div></div>
+</div>
+</div>
+<!-- Historical Trends Graph (Full Width) -->
+<div class="bg-white rounded-2xl p-8 shadow-sm border border-slate-100">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between mb-10 gap-6">
+<div>
+<h3 class="font-bold text-xl text-slate-900" style="">Historical Trends Analysis</h3>
+<p class="text-slate-500 text-sm mt-1" style="">Monitoring multi-metric progression over the last 6 months</p>
+</div>
+<div class="flex flex-wrap gap-6 items-center">
+<div class="flex gap-4 text-[11px] font-bold">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 bg-primary rounded-full"></span>
+<span class="text-slate-600" style="">Blood Pressure</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 bg-accent-red rounded-full"></span>
+<span class="text-slate-600" style="">Cholesterol</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 bg-amber-500 rounded-full"></span>
+<span class="text-slate-600" style="">Glucose</span>
+</div>
+</div>
+<div class="flex bg-slate-100 p-1.5 rounded-xl">
+<button class="px-5 py-2 text-xs font-bold bg-white rounded-lg shadow-sm" style="">6 Months</button>
+<button class="px-5 py-2 text-xs font-bold text-slate-500" style="">1 Year</button>
+<button class="px-5 py-2 text-xs font-bold text-slate-500" style="">All Time</button>
+</div>
+</div>
+</div>
+<div class="h-80 w-full relative px-2">
+<svg class="w-full h-full overflow-visible" preserveAspectRatio="none" viewBox="0 0 800 200">
+<line stroke="#f1f5f9" stroke-width="1" x1="0" x2="800" y1="0" y2="0"></line>
+<line stroke="#f1f5f9" stroke-width="1" x1="0" x2="800" y1="50" y2="50"></line>
+<line stroke="#f1f5f9" stroke-width="1" x1="0" x2="800" y1="100" y2="100"></line>
+<line stroke="#f1f5f9" stroke-width="1" x1="0" x2="800" y1="150" y2="150"></line>
+<line stroke="#f1f5f9" stroke-width="1" x1="0" x2="800" y1="200" y2="200"></line>
+<path d="M0 120 Q 150 80, 300 100 T 500 60 T 800 90" fill="none" stroke="#093FB4" stroke-linecap="round" stroke-width="4"></path>
+<path d="M0 160 Q 200 140, 400 150 T 600 130 T 800 145" fill="none" stroke="#ED3500" stroke-linecap="round" stroke-width="4"></path>
+<path d="M0 80 Q 250 110, 450 70 T 650 90 T 800 60" fill="none" stroke="#f59e0b" stroke-linecap="round" stroke-width="4"></path>
+</svg>
+<div class="absolute -bottom-10 w-full flex justify-between text-[11px] font-bold text-slate-400 uppercase">
+<span class="" style="">January</span>
+<span class="" style="">February</span>
+<span class="" style="">March</span>
+<span class="" style="">April</span>
+<span class="" style="">May</span>
+<span class="" style="">June</span>
+</div>
+</div>
+<div class="mt-16 flex justify-end">
+<button class="flex items-center gap-2 text-primary font-bold text-sm hover:underline" style="">
+<span class="material-symbols-outlined text-lg" style="">analytics</span>
+                Detailed Analysis Report
+            </button>
+</div>
+</div>
+</div>
+<!-- Quick Actions & Recommendations -->
+</main>
+<footer class="mt-12 border-t border-slate-200 dark:border-slate-800 px-6 py-8 text-center text-slate-500 dark:text-slate-400 text-xs">
+<p class="" style="">© 2024 HeartGuard AI Health Monitoring. Not a substitute for professional medical advice.</p>
+<div class="mt-4 flex justify-center gap-6">
+<a class="hover:text-primary transition-colors" href="#" style="">Privacy Policy</a>
+<a class="hover:text-primary transition-colors" href="#" style="">Terms of Service</a>
+<a class="hover:text-primary transition-colors" href="#" style="">Support</a>
+</div>
+</footer>
+</div>
+</body></html>

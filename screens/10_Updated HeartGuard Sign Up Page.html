@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sign Up | HeartGuard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#083fb4",
+                        "accent-pink": "#FFD8D8",
+                        "background-light": "#FFFCFB",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Top Navigation Bar -->
+<header class="flex items-center justify-between px-6 md:px-12 py-5 border-b border-slate-200 dark:border-slate-800 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md sticky top-0 z-50">
+<div class="flex items-center gap-2 text-primary">
+<div class="size-8 bg-primary rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-2xl">favorite</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-xl font-extrabold tracking-tight">HeartGuard</h2>
+</div>
+<div class="flex items-center gap-4">
+<span class="hidden sm:inline text-sm text-slate-500 dark:text-slate-400">Already have an account?</span>
+<a class="text-sm font-bold text-primary hover:underline" href="#">Login</a>
+</div>
+</header>
+<main class="flex-1 flex items-center justify-center p-6 relative overflow-hidden">
+<!-- Abstract Background Decorative Elements -->
+<div class="absolute top-[-10%] left-[-5%] w-72 h-72 bg-accent-pink/30 rounded-full blur-3xl opacity-60"></div>
+<div class="absolute bottom-[-10%] right-[-5%] w-96 h-96 bg-primary/5 rounded-full blur-3xl opacity-60"></div>
+<div class="w-full max-w-[1100px] grid lg:grid-cols-2 gap-12 items-center relative z-10">
+<!-- Left Side: Content -->
+<div class="hidden lg:flex flex-col gap-8">
+<div>
+<span class="inline-block px-4 py-1.5 rounded-full bg-accent-pink text-primary text-xs font-bold uppercase tracking-wider mb-4">New Era of Care</span>
+<h1 class="text-5xl font-black leading-tight tracking-tight text-slate-900 dark:text-slate-100">
+                        Smart Monitoring for a <span class="text-primary">Healthier Heart.</span>
+</h1>
+<p class="mt-6 text-lg text-slate-600 dark:text-slate-400 max-w-md">
+                        Join thousands of users who trust HeartGuard for real-time cardiac insights and proactive health management.
+                    </p>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="p-4 rounded-2xl bg-white dark:bg-slate-800 shadow-sm border border-slate-100 dark:border-slate-700">
+<span class="material-symbols-outlined text-primary mb-2">monitoring</span>
+<h4 class="font-bold text-slate-900 dark:text-white">Real-time Data</h4>
+<p class="text-sm text-slate-500">Sync with your wearable devices instantly.</p>
+</div>
+<div class="p-4 rounded-2xl bg-white dark:bg-slate-800 shadow-sm border border-slate-100 dark:border-slate-700">
+<span class="material-symbols-outlined text-primary mb-2">security</span>
+<h4 class="font-bold text-slate-900 dark:text-white">Secure Privacy</h4>
+<p class="text-sm text-slate-500">Your health data is encrypted and private.</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex -space-x-3">
+<img class="size-10 rounded-full border-2 border-background-light" data-alt="User profile portrait for testimonial" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBN6qQYgMCe2m47fjWAgXuCAprn_1CyQDFnoDO1YxDT3z7gknxRjn6c9D4jHFsy-LGG4FdDHS16gm3_GwXDCnEyvc4VUpBe_zMjnfIToXRWGWjtbAI8p0dHtaSnGIPnFPwCkE81R-UXcL6TjLScZmUdWZNOcTxGyuZe5LBfN7fbB8pDPS-KjWSri0nnFZ0eL3zUOcvQMRwyyLRau8v8zqa1j2-9xZugb3hDSRZAYaGmDbqhFyl6l9Q8HwUrNPmEU8zfOKqsM5htpPA"/>
+<img class="size-10 rounded-full border-2 border-background-light" data-alt="User profile portrait for testimonial" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-gp4bPPzC8VFqZYB5DnL86mMIwcIrk0-92C5zacjrkupmvkTq2UQdzawtWTGgb9k4gexmlmLJmmV_x0oAEzsjABINq-w7GNJKe-RPoVqnk-7949CJJr6Tm6XLfJhdHzq9wRro89l6zYEf0a_rChbDYRrObuuJRyaKtDL2Mi742-7LidP5Wuv-0pLc4zTl1hxLh7wLpkyxB-nIMoLZi8stulKQLv2539uMGszsYCLBWEA7yp-QNiMcKP4QJPfo5kOqb-0UeKGcmko"/>
+<img class="size-10 rounded-full border-2 border-background-light" data-alt="User profile portrait for testimonial" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzxQFJTciBwW9H69jOjVdymzxTuuoISXHhyATDW04ZzAiiaLlnOXSAQnWHc_4wAG-Dz06gLzFmHxbdG_ZWzEjRHc0siPyTMH-vd29j7XnztaszgJ7eycIKbsTJEqAzFC_4CV5TLRhzylNgV2ki5lZaNXN_soDmmxCGYEUXiH7g5i2ne7f1n6JB2tjhtbtwvfjxNgvFVV0XNim6KUFMF_wRpRUfNDzGVWwHiuCZl_aKqKdHJyl5FYMsuRQWbQwIdVAPU65Uh6GgUpQ"/>
+</div>
+<p class="text-sm text-slate-500 font-medium">Joined by 12,000+ users this month</p>
+</div>
+</div>
+<!-- Right Side: Sign Up Form -->
+<div class="bg-white dark:bg-slate-900 p-8 md:p-10 rounded-2xl shadow-xl shadow-primary/5 border border-slate-100 dark:border-slate-800 w-full max-w-md mx-auto">
+<div class="mb-8">
+<h2 class="text-3xl font-bold text-slate-900 dark:text-white">Create Account</h2>
+<p class="text-slate-500 dark:text-slate-400 mt-2">Start your 30-day free trial today.</p>
+</div>
+<form class="space-y-5">
+<!-- Full Name -->
+<div class="space-y-2">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300 ml-1">Full Name</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-xl">person</span>
+<input class="w-full pl-12 pr-4 py-3.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all outline-none text-slate-900 dark:text-white" placeholder="John Doe" type="text"/>
+</div>
+</div>
+<!-- Email Address -->
+<div class="space-y-2">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300 ml-1">Email Address</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-xl">mail</span>
+<input class="w-full pl-12 pr-4 py-3.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all outline-none text-slate-900 dark:text-white" placeholder="john@example.com" type="email"/>
+</div>
+</div>
+<!-- Password -->
+<div class="space-y-2">
+<label class="text-sm font-semibold text-slate-700 dark:text-slate-300 ml-1">Password</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-xl">lock</span>
+<input class="w-full pl-12 pr-12 py-3.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all outline-none text-slate-900 dark:text-white" placeholder="••••••••" type="password"/>
+<button class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 hover:text-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-xl">visibility</span>
+</button>
+</div>
+</div>
+<!-- Policy Checkbox -->
+<div class="flex items-start gap-3 py-2">
+<div class="flex items-center h-5">
+<input class="size-5 rounded border-slate-300 dark:border-slate-700 text-primary focus:ring-primary/20 bg-slate-50 dark:bg-slate-800" id="terms" type="checkbox"/>
+</div>
+<label class="text-sm text-slate-600 dark:text-slate-400 leading-tight" for="terms">
+                            I agree to the <a class="text-primary font-semibold hover:underline" href="#">Terms of Service</a> and <a class="text-primary font-semibold hover:underline" href="#">Privacy Policy</a>.
+                        </label>
+</div>
+<!-- Submit Button -->
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl shadow-lg shadow-primary/25 transition-all active:scale-[0.98] flex items-center justify-center gap-2" type="submit">
+<span>Create Account</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<!-- Divider -->
+<!-- Social Sign Up -->
+</form>
+<p class="text-center mt-8 text-sm text-slate-500 dark:text-slate-400">
+                    Already have an account? 
+                    <a class="text-primary font-bold hover:underline" href="#">Sign in</a>
+</p>
+</div>
+</div>
+</main>
+<!-- Simple Footer -->
+<footer class="p-8 text-center text-slate-400 dark:text-slate-600 text-sm">
+<p>© 2024 HeartGuard Technologies. All rights reserved.</p>
+</footer>
+</body></html>

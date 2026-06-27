@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#083fb4",
+                        "background-light": "#FFFCFB",
+                        "soft-pink": "#FFD8D8",
+                        "accent-red": "#ED3500",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
+                },
+            },
+        }</script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="bg-background-light font-display text-slate-900">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Header/Navigation -->
+<header class="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-6 py-3 sticky top-0 z-50">
+<div class="flex items-center gap-4">
+<div class="flex items-center justify-center bg-primary rounded-lg p-2 text-white">
+<span class="material-symbols-outlined" style="">favorite</span>
+</div>
+<h2 class="text-xl font-bold tracking-tight" style="">HeartGuard</h2>
+</div>
+<div class="flex items-center gap-6">
+<nav class="hidden md:flex gap-6">
+<a class="text-primary font-semibold text-sm" href="#" style="">Dashboard</a>
+<a class="text-slate-500 dark:text-slate-400 font-medium text-sm hover:text-primary transition-colors" href="#" style=""><br/></a>
+<a class="text-slate-500 dark:text-slate-400 font-medium text-sm hover:text-primary transition-colors" href="#" style=""><br/></a>
+</nav>
+<div class="flex items-center gap-2 border-l border-slate-200 dark:border-slate-800 pl-6">
+<button class="flex items-center justify-center rounded-full h-10 w-10 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300" style="">
+<span class="material-symbols-outlined text-xl" style="">notifications</span>
+</button>
+<div class="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center overflow-hidden border-2 border-primary/20">
+<img class="h-full w-full object-cover" data-alt="User profile picture of a professional man" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAh8I2c3-ILGMa3UoZvQA_o0i6mAqlaw1l3aFgo6wBB9UrXt-x8idjQIUC5tNUKQlCSq5ATdQlpEVSuKS5GXx16grJsKyFqRudJK43cPAcYITMj6cMSW01WOf-IBk8D03Jjdt158FOLU3tXdsLA4Da8c73FDkx4auVwIi_eXvNrOvVAWLtjV1nePXm2u9IUD6am0i7Q2O_UxjqkBJOrAhjXhz-HWjxkQkS_GOFCFwRLkhR_UXeWMVJ4_5QpUldlKZQ_TB-Xmf0xayY" style=""/>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-1 max-w-[1280px] mx-auto w-full p-6 space-y-8">
+<!-- Welcome Section -->
+<div class="flex flex-col gap-6">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<h1 class="text-3xl font-black tracking-tight text-slate-900" style="">Welcome back, Alex</h1>
+<p class="text-slate-500 mt-1" style="">Your health data is synced and up to date as of 9:41 AM.</p>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-center justify-center py-20 px-6 bg-white rounded-3xl border border-slate-100 shadow-sm text-center">
+<div class="w-24 h-24 bg-primary/5 rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-5xl text-primary" style="font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 48;">monitor_heart</span>
+</div>
+<h2 class="text-2xl font-bold text-slate-900 mb-3">No Health Data Yet</h2>
+<p class="max-w-md text-slate-500 leading-relaxed mb-10">
+        Complete your baseline heart health assessment to unlock personalized insights, trend tracking, and risk analysis powered by AI.
+    </p>
+<div class="flex flex-col sm:flex-row gap-4 w-full max-w-lg">
+<button class="flex-1 flex items-center justify-center gap-2 bg-primary text-white px-8 py-4 rounded-xl font-bold text-sm hover:opacity-90 transition-opacity shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-xl">restart_alt</span>
+            Start Your First Assessment
+        </button>
+<button class="flex-1 flex items-center justify-center gap-2 bg-primary/5 border-2 border-primary/20 text-primary px-8 py-4 rounded-xl font-bold text-sm hover:bg-primary/10 transition-all shadow-sm">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
+            Ask AI Assistant
+        </button>
+</div>
+</div>
+<!-- Quick Actions & Recommendations -->
+</main>
+<footer class="mt-12 border-t border-slate-200 dark:border-slate-800 px-6 py-8 text-center text-slate-500 dark:text-slate-400 text-xs">
+<p class="" style="">© 2024 HeartGuard AI Health Monitoring. Not a substitute for professional medical advice.</p>
+<div class="mt-4 flex justify-center gap-6">
+<a class="hover:text-primary transition-colors" href="#" style="">Privacy Policy</a>
+<a class="hover:text-primary transition-colors" href="#" style="">Terms of Service</a>
+<a class="hover:text-primary transition-colors" href="#" style="">Support</a>
+</div>
+</footer>
+</div>
+</body></html>

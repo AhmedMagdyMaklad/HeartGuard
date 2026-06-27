@@ -1,0 +1,194 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#093FB4",
+                        "off-white": "#FFFCFB",
+                        "soft-pink": "#FFD8D8",
+                        "accent-red": "#ED3500",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>HeartGuard - Risk Assessment Report</title>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Header Section -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark px-6 md:px-10 py-4 sticky top-0 z-50">
+<div class="flex items-center gap-3 text-primary">
+<div class="size-8 flex items-center justify-center bg-primary rounded-lg text-white">
+<span class="material-symbols-outlined" style="">favorite</span>
+</div>
+<div class="flex flex-col">
+<h2 class="text-primary text-xl font-black leading-tight tracking-tight" style="">HeartGuard</h2>
+<span class="text-[10px] uppercase tracking-widest font-bold text-slate-500" style="">Medical AI</span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden md:flex items-center justify-center rounded-lg h-10 px-4 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-semibold text-sm hover:bg-slate-200 transition-colors" style="">
+<span class="material-symbols-outlined mr-2 text-lg" style="">dashboard</span> Dashboard
+                </button>
+<div class="size-10 rounded-full border-2 border-primary/20 bg-cover bg-center" data-alt="User profile avatar portrait" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuBcU_bV1FveR3jDgMvVgS-D-deU1BIo2XSvw-EBWDJDI5CUggyK8I7va0KkEHX_-LnJzJCUGcZvXi_pL1gwqpvf9Pbesu8MDz8OqmGR5GmQswuOpax0htI4HvgGduxFLjlVj3VsB6BPEmF3IHLymU8WhRnW75V9Fo1NT8OfMtx1g2ePOVH5BXjOivdtr632KuHQhEQQhS4vIbwEs1UA1_K1Xs-yx8d9w3ZR6uf1Bz66kGc9OzRd_uaFUYMbnSskPkHpOCLFTgUaark&quot;);"></div>
+</div>
+</header>
+<main class="flex flex-1 justify-center py-8 px-4 md:px-10">
+<div class="layout-content-container flex flex-col max-w-[1024px] flex-1 gap-8">
+<!-- Report Title -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div class="flex flex-col gap-1">
+<h1 class="text-slate-900 dark:text-white text-3xl md:text-4xl font-black tracking-tight" style="">Risk Assessment Report</h1>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium flex items-center gap-2" style="">
+<span class="material-symbols-outlined text-sm" style="">calendar_today</span> Generated on Oct 24, 2023 • ID: HG-99281-X
+                        </p>
+</div>
+<div class="flex gap-2">
+<button class="flex items-center justify-center rounded-lg h-10 px-4 bg-primary text-white font-bold text-sm shadow-lg shadow-primary/20 hover:opacity-90 transition-opacity" style="">
+<span class="material-symbols-outlined mr-2" style="">download</span> Download PDF
+                        </button>
+</div>
+</div>
+<!-- Main Risk Score Visual -->
+<section class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+<div class="lg:col-span-1 flex flex-col items-center justify-center bg-white dark:bg-slate-900 p-8 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800">
+<p class="text-slate-500 font-bold text-xs uppercase tracking-widest mb-6" style="">Calculated Risk Score</p>
+<div class="relative flex items-center justify-center size-48 mb-6">
+<!-- SVG Gauge Simulation -->
+<svg class="size-full transform -rotate-90">
+<circle class="text-slate-100 dark:text-slate-800" cx="96" cy="96" fill="transparent" r="80" stroke="currentColor" stroke-width="12"></circle>
+<circle class="text-accent-red" cx="96" cy="96" fill="transparent" r="80" stroke="currentColor" stroke-dasharray="502" stroke-dashoffset="160" stroke-width="12"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="text-5xl font-black text-slate-900 dark:text-white leading-none" style="">68%</span>
+<span class="text-accent-red font-bold text-sm mt-1 uppercase" style="">High Risk</span>
+</div>
+</div>
+<div class="w-full flex flex-col gap-2">
+<div class="h-2 w-full rounded-full bg-gradient-to-r from-emerald-500 via-amber-400 to-accent-red"></div>
+<div class="flex w-full justify-between px-1 text-[10px] font-bold text-slate-400 uppercase">
+<span class="" style="">Low</span>
+<span class="" style="">Moderate</span>
+<span class="text-accent-red" style="">High</span>
+</div>
+</div>
+</div>
+<!-- AI Explanation -->
+<div class="lg:col-span-2 flex flex-col bg-white dark:bg-slate-900 p-8 rounded-xl shadow-sm border border-slate-100 dark:border-slate-800">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-primary" style="">psychology</span>
+<h3 class="text-xl font-bold text-slate-900 dark:text-white" style="">AI Analysis Findings</h3>
+</div>
+<div class="space-y-4 text-slate-600 dark:text-slate-300 leading-relaxed">
+<p class="" style="">Based on your clinical data, the AI has identified a <span class="font-bold text-accent-red" style="">significant elevation</span> in cardiovascular risk markers. The primary drivers are your LDL Cholesterol levels and resting heart rate combined with pulse pressure trends.</p>
+<p class="" style="">While your BMI is in the overweight category, the synergy between metabolic markers suggests a need for immediate lifestyle adjustments to prevent arterial thickening.</p>
+<div class="p-4 bg-primary/5 rounded-lg border-l-4 border-primary">
+<p class="text-sm italic font-medium" style="">"Recommendation: Schedule a follow-up with a cardiologist within the next 14 days to discuss lipid-lowering therapy."</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Metric Breakdown Grid -->
+<section>
+<h3 class="text-xl font-bold text-slate-900 dark:text-white mb-6 px-1" style="">Metric Breakdown</h3>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-4 lg:grid-cols-6">
+<div class="flex flex-col bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-100 dark:border-slate-800 shadow-sm">
+<span class="text-slate-400 text-xs font-bold uppercase mb-2" style="">Cholesterol</span>
+<span class="text-2xl font-black text-slate-900 dark:text-white" style="">240 <span class="text-xs font-medium" style="">mg/dL</span></span>
+<span class="mt-3 px-2 py-1 rounded-full bg-accent-red/10 text-accent-red text-[10px] font-bold w-fit uppercase" style="">Elevated</span>
+</div>
+<div class="flex flex-col bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-100 dark:border-slate-800 shadow-sm">
+<span class="text-slate-400 text-xs font-bold uppercase mb-2" style="">BMI</span>
+<span class="text-2xl font-black text-slate-900 dark:text-white" style="">28.5</span>
+<span class="mt-3 px-2 py-1 rounded-full bg-amber-500/10 text-amber-600 text-[10px] font-bold w-fit uppercase" style="">Overweight</span>
+</div>
+<div class="flex flex-col bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-100 dark:border-slate-800 shadow-sm">
+<span class="text-slate-400 text-xs font-bold uppercase mb-2" style="">Heart Rate</span>
+<span class="text-2xl font-black text-slate-900 dark:text-white" style="">82 <span class="text-xs font-medium" style="">bpm</span></span>
+<span class="mt-3 px-2 py-1 rounded-full bg-emerald-500/10 text-emerald-600 text-[10px] font-bold w-fit uppercase" style="">Normal</span>
+</div>
+<div class="flex flex-col bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-100 dark:border-slate-800 shadow-sm">
+<span class="text-slate-400 text-xs font-bold uppercase mb-2" style="">Glucose</span>
+<span class="text-2xl font-black text-slate-900 dark:text-white" style="">105 <span class="text-xs font-medium" style="">mg/dL</span></span>
+<span class="mt-3 px-2 py-1 rounded-full bg-amber-500/10 text-amber-600 text-[10px] font-bold w-fit uppercase" style="">Elevated</span>
+</div>
+<div class="flex flex-col bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-100 dark:border-slate-800 shadow-sm">
+<span class="text-slate-400 text-xs font-bold uppercase mb-2" style="">Pulse Pressure</span>
+<span class="text-2xl font-black text-slate-900 dark:text-white" style="">55 <span class="text-xs font-medium" style="">mmHg</span></span>
+<span class="mt-3 px-2 py-1 rounded-full bg-emerald-500/10 text-emerald-600 text-[10px] font-bold w-fit uppercase" style="">Normal</span>
+</div>
+<div class="flex flex-col bg-white dark:bg-slate-900 p-5 rounded-xl border border-slate-100 dark:border-slate-800 shadow-sm">
+<span class="text-slate-400 text-xs font-bold uppercase mb-2" style="">ECG</span>
+<span class="text-xl font-black text-slate-900 dark:text-white" style="">Normal</span>
+<span class="mt-3 px-2 py-1 rounded-full bg-emerald-500/10 text-emerald-600 text-[10px] font-bold w-fit uppercase" style="">Normal</span>
+</div></div>
+</section>
+<!-- Personalized Recommendations -->
+<section>
+<h3 class="text-xl font-bold text-slate-900 dark:text-white mb-6 px-1" style="">Personalized Recommendations</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+<div class="flex flex-col p-6 bg-soft-pink dark:bg-rose-950/30 rounded-xl border border-rose-100 dark:border-rose-900/50">
+<span class="material-symbols-outlined text-accent-red mb-3" style="">restaurant</span>
+<h4 class="font-bold text-slate-900 dark:text-slate-100 mb-2" style="">Diet Plan</h4>
+<p class="text-sm text-slate-700 dark:text-slate-300" style="">Switch to a DASH diet. Reduce sodium intake to under 2,300mg daily.</p>
+</div>
+<div class="flex flex-col p-6 bg-soft-pink dark:bg-rose-950/30 rounded-xl border border-rose-100 dark:border-rose-900/50">
+<span class="material-symbols-outlined text-accent-red mb-3" style="">fitness_center</span>
+<h4 class="font-bold text-slate-900 dark:text-slate-100 mb-2" style="">Exercise</h4>
+<p class="text-sm text-slate-700 dark:text-slate-300" style="">150 min of moderate aerobic activity weekly. Focus on Zone 2 training.</p>
+</div>
+<div class="flex flex-col p-6 bg-soft-pink dark:bg-rose-950/30 rounded-xl border border-rose-100 dark:border-rose-900/50">
+<span class="material-symbols-outlined text-accent-red mb-3" style="">self_improvement</span>
+<h4 class="font-bold text-slate-900 dark:text-slate-100 mb-2" style="">Lifestyle</h4>
+<p class="text-sm text-slate-700 dark:text-slate-300" style="">Ensure 7-9 hours of quality sleep. Monitor stress levels using your wearable.</p>
+</div>
+<div class="flex flex-col p-6 bg-soft-pink dark:bg-rose-950/30 rounded-xl border border-rose-100 dark:border-rose-900/50">
+<span class="material-symbols-outlined text-accent-red mb-3" style="">medical_services</span>
+<h4 class="font-bold text-slate-900 dark:text-slate-100 mb-2" style="">Medical</h4>
+<p class="text-sm text-slate-700 dark:text-slate-300" style="">Full blood lipid panel screening required. Consult GP for Statins review.</p>
+</div>
+</div>
+</section>
+<!-- Action Buttons -->
+<section class="flex flex-col md:flex-row gap-4 py-6 border-t border-slate-200 dark:border-slate-800 mt-4">
+<button class="flex-1 flex items-center justify-center rounded-lg h-12 px-6 bg-primary text-white font-bold text-base hover:opacity-90 transition-opacity" style="">
+<span class="material-symbols-outlined mr-2" style="">chat_bubble</span> Talk to AI Specialist
+                    </button>
+<button class="flex-1 flex items-center justify-center rounded-lg h-12 px-6 bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 font-bold text-base hover:bg-slate-300 transition-colors" style="">
+<span class="material-symbols-outlined mr-2" style="">arrow_back</span> Back to Dashboard
+                    </button>
+</section>
+<!-- Footer -->
+<footer class="flex flex-col items-center gap-4 py-10 text-center">
+<div class="flex items-center gap-2 text-slate-400 text-xs font-medium" style="">
+<span class="material-symbols-outlined text-sm" style="">lock</span>
+                        Your health data is encrypted using AES-256 standards. 
+                    </div>
+<p class="text-slate-400 text-[10px] max-w-2xl px-6" style="">
+                        Disclaimer: This AI-powered report is for informational purposes only and does not constitute medical advice. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition.
+                    </p>
+<div class="text-slate-400 text-xs pt-4 border-t border-slate-200 dark:border-slate-800 w-full" style="">
+                        © 2023 HeartGuard Medical Systems Inc. All rights reserved.
+                    </div>
+</footer>
+</div>
+</main>
+</div>
+</div>
+</body></html>

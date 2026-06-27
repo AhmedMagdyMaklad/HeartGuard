@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HeartGuard - Medical Test Results</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#083fb4",
+                        "background-light": "#fcfafb",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Header Section -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 px-6 md:px-10 py-4 bg-white dark:bg-slate-900/50 backdrop-blur-md sticky top-0 z-50">
+<div class="flex items-center gap-3 text-primary">
+<div class="size-8 flex items-center justify-center bg-primary/10 rounded-lg">
+<span class="material-symbols-outlined text-primary text-2xl">favorite</span>
+</div>
+<h2 class="text-slate-900 dark:text-slate-100 text-xl font-bold leading-tight tracking-tight">Heart Risk Assessment</h2>
+</div>
+<div class="flex flex-1 justify-end gap-4 items-center">
+<div class="hidden md:block text-right">
+<p class="text-xs text-slate-500 font-medium">Clinically Verified</p>
+<p class="text-sm font-semibold text-slate-700 dark:text-slate-300">Assessment Portal</p>
+</div>
+<div class="bg-slate-200 dark:bg-slate-700 rounded-full size-10 flex items-center justify-center overflow-hidden border-2 border-primary/20">
+<img class="w-full h-full object-cover" data-alt="User profile avatar placeholder" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDV8lRmzXex8qIAlIahP1H4rq24pNEYnZ1qMjbjChtjwMhsrw4Nh6Q-Izdt-ExQi407G9sVPSzF2BsuNwd-QAzPQwcfGXl2VedLldGSfo9x8hp3wRVZJ3-hXQ__brAwviYmiiMK7CjW38DPPqFCE3eC0SPuPoUgwqUcUGWNiF-goH2w-iSQftbfJ1r7PuQCZAdw9E1EPrM-UetzLbEC7BuAFyfY6vccKBX88Xj3h79Hqxirr3eoLZRmj-uWmQyFLQrFbORWt8Z1gEU"/>
+</div>
+</div>
+</header>
+<main class="flex flex-1 justify-center py-8 px-4 md:px-0">
+<div class="layout-content-container flex flex-col max-w-[640px] flex-1">
+<!-- Progress Section -->
+<!-- Main Form Card -->
+<!-- Progress Section -->
+<div class="mb-8 flex flex-col gap-3">
+<div class="flex justify-between items-end">
+<div class="flex flex-col gap-1">
+<span class="text-xs font-bold text-primary uppercase tracking-widest">Step 1 of 2</span>
+<h3 class="text-lg font-bold text-slate-800 dark:text-slate-100">Health Metrics</h3>
+</div>
+<span class="text-sm font-semibold text-slate-500">50% Complete</span>
+</div>
+<div class="h-2 w-full bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full transition-all duration-500 ease-out" style="width: 50%"></div>
+</div>
+</div><div class="bg-white dark:bg-slate-900 rounded-xl shadow-md border border-slate-100 dark:border-slate-800 overflow-hidden">
+<div class="p-6 md:p-8 border-b border-slate-100 dark:border-slate-800">
+<h1 class="text-slate-900 dark:text-slate-100 text-2xl font-bold mb-2">Heart Risk Assessment</h1>
+<p class="text-slate-500 text-base">Enter your current health metrics below to receive an updated heart disease risk prediction.</p>
+</div>
+<div class="p-6 md:p-8 flex flex-col gap-6">
+<!-- Input: Cholesterol -->
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-center">
+<label class="text-slate-700 dark:text-slate-300 text-sm font-semibold uppercase tracking-wide">Total Cholesterol</label>
+<span class="material-symbols-outlined text-slate-400 cursor-help text-[20px]" title="Standard range: 125 to 200 mg/dL">info</span>
+</div>
+<div class="relative">
+<input class="w-full h-14 pl-4 pr-16 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all text-lg font-medium" placeholder="e.g. 180" step="1" type="number"/>
+<span class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 font-medium">mg/dL</span>
+</div>
+</div>
+<!-- Input Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- BMI -->
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-center">
+<label class="text-slate-700 dark:text-slate-300 text-sm font-semibold uppercase tracking-wide">BMI</label>
+<span class="material-symbols-outlined text-slate-400 cursor-help text-[20px]" title="Body Mass Index (Normal: 18.5–24.9)">info</span>
+</div>
+<div class="relative">
+<input class="w-full h-14 pl-4 pr-12 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all text-lg font-medium" placeholder="24.5" step="0.1" type="number"/>
+<span class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 font-medium">kg/m²</span>
+</div>
+</div>
+<!-- Heart Rate -->
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-center">
+<label class="text-slate-700 dark:text-slate-300 text-sm font-semibold uppercase tracking-wide">Heart Rate</label>
+<span class="material-symbols-outlined text-slate-400 cursor-help text-[20px]" title="Resting heart rate in beats per minute">info</span>
+</div>
+<div class="relative">
+<input class="w-full h-14 pl-4 pr-14 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all text-lg font-medium" placeholder="72" step="1" type="number"/>
+<span class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 font-medium">BPM</span>
+</div>
+</div>
+<!-- Glucose -->
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-center">
+<label class="text-slate-700 dark:text-slate-300 text-sm font-semibold uppercase tracking-wide">Glucose</label>
+<span class="material-symbols-outlined text-slate-400 cursor-help text-[20px]" title="Fasting blood sugar level">info</span>
+</div>
+<div class="relative">
+<input class="w-full h-14 pl-4 pr-16 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all text-lg font-medium" placeholder="95" step="1" type="number"/>
+<span class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 font-medium">mg/dL</span>
+</div>
+</div>
+<!-- Pulse Pressure -->
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-center">
+<label class="text-slate-700 dark:text-slate-300 text-sm font-semibold uppercase tracking-wide">Pulse Pressure</label>
+<span class="material-symbols-outlined text-slate-400 cursor-help text-[20px]" title="Difference between systolic and diastolic blood pressure">info</span>
+</div>
+<div class="relative">
+<input class="w-full h-14 pl-4 pr-18 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all text-lg font-medium" placeholder="40" step="1" type="number"/>
+<span class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 font-medium">mmHg</span>
+</div>
+</div>
+</div>
+<!-- Form Footer / Actions -->
+<div class="mt-4 flex flex-col gap-4">
+<button class="w-full h-16 bg-primary hover:bg-primary/90 text-white rounded-xl font-bold text-lg shadow-lg shadow-primary/30 flex items-center justify-center gap-2 transition-all active:scale-[0.98]"><span class="material-symbols-outlined">arrow_forward</span> Next: Upload ECG</button>
+<button class="w-full h-12 flex items-center justify-center gap-2 bg-transparent text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 font-semibold transition-colors"><span class="material-symbols-outlined text-lg">arrow_back</span> Back to Dashboard</button>
+</div>
+</div>
+</div>
+<!-- Bottom Info -->
+<div class="mt-8 px-6 text-center">
+<p class="text-slate-400 text-xs leading-relaxed">
+                            Disclaimer: HeartGuard is a screening tool and does not provide medical diagnosis. Always consult with a qualified healthcare professional for medical advice, diagnosis, or treatment. 
+                            <a class="text-primary hover:underline font-medium" href="#">Learn more about our methodology.</a>
+</p>
+</div>
+</div>
+</main>
+</div>
+</div>
+</body></html>

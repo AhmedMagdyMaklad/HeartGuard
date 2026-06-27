@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HeartGuard - Lifestyle Assessment</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#083fb4",
+                        "background-light": "#FFFCFB",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen text-slate-900 dark:text-slate-100">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Header/Top Nav -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 px-6 md:px-10 py-4 bg-white dark:bg-slate-900">
+<div class="flex items-center gap-3 text-primary">
+<div class="size-8 flex items-center justify-center bg-primary/10 rounded-lg">
+<span class="material-symbols-outlined text-primary">favorite</span>
+</div>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-tight">HeartGuard</h2>
+</div>
+<button class="flex items-center justify-center rounded-full h-10 w-10 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 transition-colors">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</header>
+<main class="flex-1 flex flex-col items-center py-8 md:py-16 px-4">
+<div class="w-full max-w-[640px] flex flex-col gap-8">
+<!-- Progress Section -->
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<span class="text-primary font-semibold text-sm uppercase tracking-wider">Step 2 of 3</span>
+<span class="text-slate-500 dark:text-slate-400 text-sm font-medium">66% Complete</span>
+</div>
+<div class="h-2.5 w-full bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full transition-all duration-500" style="width: 66%;"></div>
+</div>
+</div>
+<!-- Intro Text -->
+<div class="flex flex-col gap-2">
+<h1 class="text-slate-900 dark:text-white text-3xl md:text-4xl font-bold tracking-tight">Tell us about your lifestyle</h1>
+<p class="text-slate-600 dark:text-slate-400 text-base md:text-lg">Your daily habits play a key role in cardiovascular health.</p>
+</div>
+<!-- Onboarding Card -->
+<div class="bg-white dark:bg-slate-900 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800 p-6 md:p-8 flex flex-col gap-8">
+<!-- Cigarettes Input Section -->
+<div class="flex flex-col gap-6">
+<div class="flex flex-col gap-1">
+<label class="text-slate-900 dark:text-white text-lg font-semibold">Average Cigarettes per day</label>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Be as accurate as possible for the best health risk assessment.</p>
+</div>
+<!-- Slider Component -->
+<div class="flex flex-col gap-4 py-4">
+<div class="relative w-full h-2 bg-slate-100 dark:bg-slate-800 rounded-full">
+<div class="absolute top-0 left-0 h-full bg-primary/40 rounded-full" style="width: 32%;"></div>
+<div class="absolute top-1/2 -translate-y-1/2 left-[32%] size-6 bg-primary border-4 border-white dark:border-slate-900 rounded-full shadow-lg cursor-pointer"></div>
+</div>
+<div class="flex justify-between text-xs font-medium text-slate-400 uppercase tracking-tighter">
+<span>0</span>
+<span>10</span>
+<span>20</span>
+<span>30</span>
+<span>40+</span>
+</div>
+</div>
+<!-- Manual Input -->
+<div class="flex flex-col gap-2">
+<span class="text-slate-700 dark:text-slate-300 text-sm font-medium">Or enter exact number</span>
+<div class="relative">
+<input class="w-full bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 rounded-lg px-4 py-3 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-primary transition-all outline-none" placeholder="e.g. 5" type="number" value="8"/>
+<div class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 text-sm font-medium">
+                                        / day
+                                    </div>
+</div>
+</div>
+</div>
+<div class="h-px bg-slate-100 dark:bg-slate-800 w-full"></div>
+<!-- Info Tip -->
+<div class="flex gap-3 p-4 bg-primary/5 rounded-lg border border-primary/10">
+<span class="material-symbols-outlined text-primary text-xl">info</span>
+<p class="text-primary text-sm leading-relaxed">
+                                Studies show that even a small reduction in daily cigarette consumption can significantly lower heart disease risk within the first year.
+                            </p>
+</div>
+</div>
+<!-- Navigation Buttons -->
+<div class="flex items-center gap-4 pt-4">
+<button class="flex-1 flex items-center justify-center gap-2 h-12 rounded-xl border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 font-bold hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-lg">arrow_back</span>
+                            Back
+                        </button>
+<button class="flex-[2] flex items-center justify-center gap-2 h-12 rounded-xl bg-primary text-white font-bold hover:bg-primary/90 shadow-md shadow-primary/20 transition-all">
+                            Next Step
+                            <span class="material-symbols-outlined text-lg">arrow_forward</span>
+</button>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="py-8 px-4 text-center">
+<p class="text-slate-400 text-xs">© 2024 HeartGuard Health. All medical data is encrypted and secure.</p>
+</footer>
+</div>
+</div>
+</body></html>
